@@ -15,7 +15,8 @@
 *.swp
 
 # Editor/IDE-Dateien
-build/
+build/*
+
 .vscode/
 *.log
 *.DS_Store
