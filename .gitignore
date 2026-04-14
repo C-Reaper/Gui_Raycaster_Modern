@@ -5,6 +5,10 @@
 *.a
 *.so
 
+*.wasm
+*.html  
+*.js
+
 # Backup-Dateien
 *~
 *.bak
