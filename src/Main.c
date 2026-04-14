@@ -1,4 +1,3 @@
-//#include "C:/Wichtig/System/Static/Library/WindowEngine1.0.h"
 #include "/home/codeleaded/System/Static/Library/WindowEngine1.0.h"
 
 int nMapWidth = 16;				
@@ -163,6 +162,10 @@ void Setup(AlxWindow* w){
 }
 
 void Update(AlxWindow* w){
+	if (Stroke(ALX_KEY_F11).DOWN){
+	    AlxWindow_SetFullscreen(w);
+	}
+
     if (Stroke(ALX_KEY_A).DOWN)
 		fPlayerA -= (fSpeed * 0.75f) * w->ElapsedTime;
 
@@ -207,7 +210,7 @@ void Delete(AlxWindow* w){
 }
 
 int main(){
-    if(Create("Raycasting World",1900,1000,1,1,Setup,Update,Delete))
+    if(Create("RC",1900,1000,1,1,Setup,Update,Delete))
         Start();
     return 0;
 }
