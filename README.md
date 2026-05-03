@@ -64,7 +64,7 @@ wine build/Main.exe
 ### WebAssembly (Emscripten)
 ```sh
 cd Gui_Raycaster_Modern
-emcc -O0 -msimd128 -mavx2 -std=gnu17 -Isrc -D_WEB -sINITIAL_MEMORY=169082880 src/*.c -o build/index.html -s USE_SDL=0
+emcc -O0 -msimd128 -mavx2 -std=gnu17 -Wall -Wno-unused -Wshadow -Werror -Isrc -D_WEB -sINITIAL_MEMORY=169082880 src/*.c -o build/index.html -s USE_SDL=0
 emrun --no_browser --port 8080 build
 ```
 
